@@ -1,0 +1,129 @@
+/*测试样式*/
+.addborder{border: 1px solid #f00;!important;}
+
+/*小屏header样式*/
+.user-header{
+    background-color: #1E262C;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+}
+
+/*小屏header上的字体图标*/
+.user-font{
+    color: #ffffff;
+    font-size:20px;
+}
+
+/*右侧导航栏*/
+.user-nav{
+    background-color: #1E262C;
+    color: #ffffff;
+}
+
+/*鼠标变手型样式*/
+.cusPoi{
+    cursor: pointer;
+}
+
+/*内容居中*/
+.textAlign{
+    text-align: center;
+}
+/*导航栏logo行高*/
+.user-nva-line{
+    line-height: 50px;
+}
+
+/*整体内容样式*/
+.contentPosi{
+    position: relative;
+    overflow: visible;
+
+}
+
+.user-hegit{
+    height: 150px;
+}
+
+.user-menu-head{
+    margin-top: 10px;
+}
+
+.user-menu-head a{
+    color: #ffffff;
+    font-size:24px;
+    text-decoration:none;
+    margin-left: 20px;
+}
+.user-menu-head a:hover{
+    text-decoration:underline;
+}
+
+.user-menu-c{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.user-menu-c div{
+    height: 40px;
+}
+.user-menu-c:hover{
+    background-color: #3A434B;
+}
+.user-menu-c:hover a{
+    color: #F56C2D;
+}
+.user-menu-c a{
+    line-height: 40px;
+    color: #ffffff;
+}
+
+.on{
+    background-color: #3A434B;
+}
+.on a{
+    color: #F56C2D;
+}
+
+.user-exit{
+margin-left: 20px;
+    margin-top: 100px;
+}
+
+.user-exit:hover{
+    color: #F56C2D;
+}
+
+
+.con-user-header{
+    background-color: #3AADE3;
+    height: 50px;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+
+/*新增用户表单*/
+.user-con-for{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+.user-marg{
+    margin-top: 100px;
+}
+
+
+#topDiv{
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    position: absolute;
+}
+
+.div-play{
+    position: absolute;
+    display: none;
+}

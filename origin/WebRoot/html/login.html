@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body{
+            font-family: 'Open Sans',sans-serif;
+        }
+        .or-sign a{
+            text-decoration: none;
+            color:  #1e262c;
+        }
+        .or-sign{
+            color: #1e262c;
+            font-size: 11px;
+            padding-top:20px;
+        }
+        .or-border{
+            border-bottom:1px solid black ;
+            padding-bottom:20px
+        }
+        .or-font{
+            color: #1e262c;
+            padding-top:20px;
+        }
+        .or-lo{
+            border: 1px solid silver;
+            height: 40px;
+            border-radius:3px;
+            position: relative;
+
+        }
+        .or-email{
+            border: none;
+            outline: none;
+            height: 38px;
+            position: absolute;
+
+        }
+        .or-err-bd{
+            border: 1px solid red;
+            background-color: rgb(255,235,228);
+        }
+        .or-err-bg{
+            background-color: rgb(255,235,228);
+        }
+        #err{
+            color: red;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+       .or-login{
+           background-color: #f56c2d ;
+           border: 1px solid #f56c2d;
+           color: white;
+       }
+
+    </style>
+</head>
+
+<body>
+<!--居中-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 col-md-offset-3">
+            <div class="row or-sign">
+                <div class="col-xs-3 col-xs-offset-1 or-border"><a href="login.html">SIGN IN</a></div>
+                <div class="col-xs-7 col-md-4 or-border"><a href="register.html">CREATE AN ACCOUNT</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-11 col-xs-offset-1 or-font col-md-5 col-md-offset-4">
+           <h4>Sign in with your EA Account</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4">
+            <div class="or-lo or-lo-one">
+                <i class="glyphicon glyphicon-user btn-lg" style="color: silver"></i>
+                <input type="email" class="or-email" placeholder="Email Address"  id="email">
+            </div>
+            <div class="or-lo or-lo-two">
+                <i class="glyphicon glyphicon-tasks btn-lg" style="color: silver"></i>
+                <input type="password" class="or-email" placeholder="Password" id="pwd">
+            </div>
+            <p id="err"></p>
+        </div>
+
+    </div>
+    <div class="row">
+       <div class="col-xs-5 col-xs-offset-1 col-md-5 col-md-offset-4">
+               <input type="checkbox" name="" id="checkBox" class="checkBox">
+               <label for="checkBox">Remember me </label>
+       </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4">
+            <a class="btn btn-lg btn-block or-login" id="sub">SIGN IN</a>
+            </div>
+        </div>
+        <div>
+            <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4">
+                <a href="#" id="sub">Forget your password?</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery-1.11.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script>
+    //邮箱验证
+    $("#email").change(function () {
+        var e= $("#email").val()
+        var re = /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/
+        var reu=re.test(e);
+        if(reu){
+            $(".or-lo-one").removeClass("or-err-bd");
+            $("#email").removeClass("or-err-bg");
+            $("#err").text("")
+            $(".or-lo-two").removeClass("or-err-bd");
+            $("#pwd").removeClass("or-err-bg");
+
+        }else {
+       $(".or-lo-one").addClass("or-err-bd");
+       $("#email").addClass("or-err-bg");
+       $("#err").text("Email address is invalid")
+            $(".or-lo-two").addClass("or-err-bd");
+            $("#pwd").addClass("or-err-bg");
+
+        }
+    })
+   $("#sub").click(function () {
+       var email=$("#email").val()
+       var pwd=$("#pwd").val()
+       $.post("http://localhost:8080/origin/servlet/userServlet?",{method:"ispwd",username:email,pwd:pwd},function (data) {
+           //alert(data);
+           if(eval(data)){
+               window.open("information.html");
+           }
+       })
+   })
+
+
+</script>
+</body>
+
+</html>

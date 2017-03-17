@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>origin.admin</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/jquery-1.11.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/angular.min.js"></script>
+    <link rel="stylesheet" href="../../css/admin/admin.css">
+
+    <!-- HTML5 Shim and Respond。js IE8支持 HTML5 原始和媒体查询。 -->
+    <!-- WARNING: Respond。如果通过file://查看页面js将不工作。 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body style="overflow-x: hidden;">
+
+<div class="container-fluid" style="overflow: visible;">
+    <div class="row contentPosi">
+
+        <!--浮动导航栏-->
+        <div class="navbar-fixed-top  col-sm-3 hidden-xs visible-sm-block visible-md-block visible-lg-block user-nav col-xs-9" role="navigation">
+            <div class="row">
+                <div class="col-xs-12 textAlign user-nva-line">
+                    <a href="javascript:;"><img src="../../img/adminImg/logo.png"></a>
+                </div>
+            </div>
+                      <!--菜单栏-->
+                 <div class="row ">
+                     <div class="col-xs-12">
+
+                            <div class="row">
+                                <div class="col-xs-12 user-hegit"></div>
+                            </div>
+
+                         <div class="row  user-menu-head">
+                             <div class="col-xs-12"><a href="javascript:;">用户管理:</a></div>
+                         </div>
+
+                         <div class="row  user-menu-c cusPoi on nav-Btn">
+                             <div class="col-xs-12"><a href="javascript:;">新增用户</a></div>
+                         </div>
+
+                         <div class="row  user-menu-c cusPoi nav-Btn">
+                             <div class="col-xs-12"><a href="javascript:;">修改用户</a></div>
+                         </div>
+
+
+
+                         <div class="row  user-menu-head">
+                             <div class="col-xs-12"><a href="javascript:;">商品管理:</a></div>
+                         </div>
+
+                         <div class="row  user-menu-c cusPoi nav-Btn">
+                             <div class="col-xs-12"><a href="javascript:;">新增游戏</a></div>
+                         </div>
+
+                         <div class="row  user-menu-c cusPoi nav-Btn">
+                             <div class="col-xs-12"><a href="javascript:;">修改游戏信息</a></div>
+                         </div>
+
+
+                     </div>
+                 </div>
+
+            <div class="row">
+                <div class="col-xs-12 user-font user-exit cusPoi" title="退出">
+                    <i class="glyphicon glyphicon-log-in" ></i><span>&nbsp;退出系统</span>
+                </div>
+            </div>
+
+        </div>
+        <!--浮动导航栏结束-->
+
+
+        <!--header-->
+        <div class="col-xs-12 col-sm-9 col-sm-offset-3 col-xs-offset-0">
+            <div class="row visible-xs-block hidden-sm">
+                <div class="col-xs-12 user-header">
+                    <div class="row">
+                        <!--左侧图标-->
+                        <div class="col-xs-2 col-xs-offset-1 cusPoi" >
+                            <i class="glyphicon glyphicon-align-justify user-font nav-menu" title="菜单"></i>
+                        </div>
+
+                        <!--右侧图标-->
+                        <div class="col-xs-2 col-xs-offset-6 cusPoi user-font" style="text-align:right">
+                                <i class="glyphicon glyphicon-log-in" title="退出"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header结束-->
+
+             <!--内容行-->
+            <div class="row" style="position: relative;">
+                <div class="col-xs-12 div-play">
+                    <div class="row">
+                        <div class="col-xs-12 con-user-header" style="text-align: center">
+                            新增用户
+                        </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="col-xs-12">
+                                <div class="col-xs-12 col-md-6 user-con-for">
+                                    <div class="form-group" id="form-username">
+                                        <label for="username" class="col-sm-4 control-label " style="text-align: center">用户名:</label>
+                                        <div class="col-sm-8" style="margin-left: 0">
+                                            <input type="text" class="form-control" id="username" placeholder="请输入4-10位英文或数字">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <div class="col-xs-12 col-md-6 user-con-for">
+                                    <div class="form-group" id="form-pwd" >
+                                        <label for="pwd" class="col-sm-4 control-label " style="text-align: center">密码:</label>
+                                        <div class="col-sm-8" style="margin-left: 0">
+                                            <input type="password" class="form-control" id="pwd" placeholder="请输入密码">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xs-12 col-md-6 user-con-for">
+                                    <div class="form-group" id="form-email">
+                                        <label for="email" class="col-sm-4 control-label " style="text-align: center">邮箱:</label>
+                                        <div class="col-sm-8" style="margin-left: 0">
+                                            <input type="text" class="form-control" id="email" placeholder="请输入邮箱">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-xs-12 col-md-6 user-con-for">
+                                    <div class="form-group">
+                                        <label for="country" class="col-sm-4 control-label " style="text-align: center">国籍:</label>
+                                        <div class="col-sm-8" style="margin-left: 0">
+                                         <select id="country" class="form-control" value="">
+                                             <option value="false">请选择国籍</option>
+                                             <option value="中国">中国</option>
+                                             <option value="美国">美国</option>
+                                             <option value="俄罗斯">俄罗斯</option>
+                                             <option value="法国">法国</option>
+                                             <option value="英国">英国</option>
+                                         </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="col-xs-12 col-md-6 user-con-for">
+                                    <div class="form-group">
+                                        <label for="birth" class="col-sm-4 control-label " style="text-align: center">生日:</label>
+                                        <div class="col-sm-8" style="margin-left: 0">
+                                            <input type="date" class="form-control" id="birth" placeholder="请输入生日如2017-02-03">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="row" >
+                                <div class="col-xs-2 col-xs-offset-5" style="margin-top: 100px;">
+                                    <button type="button" class="btn btn-primary" id="add">提交信息</button>
+                                </div>
+                            </div>
+                    </div>
+
+                </div>
+
+
+<!--修改用户-->
+                <div class="col-xs-12 div-play">
+                    <div class="row">
+                        <div class="col-xs-12 con-user-header" style="text-align: center">
+                            修改用户
+                        </div>
+                    </div>
+
+
+                    <div class="row"></div>
+
+                </div>
+<!--新增游戏-->
+
+
+                <div class="col-xs-12 div-play">
+                    <div class="row">
+                        <div class="col-xs-12 con-user-header" style="text-align: center">
+                            新增游戏
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <!--游戏名称-->
+                        <div class="col-xs-12 col-md-6 user-con-for">
+                            <div class="form-group" id="form-gamename">
+                                <label for="gamename" class="col-sm-4 control-label " style="text-align: center">游戏名称:</label>
+                                <div class="col-sm-8" style="margin-left: 0">
+                                    <input type="text" class="form-control" id="gamename" name="gamename" placeholder="请输入游戏名称">
+                                </div>
+                            </div>
+                        </div>
+                        <!--价格-->
+                        <div class="col-xs-12 col-md-6 user-con-for">
+                            <div class="form-group" id="form-price">
+                                <label for="price" class="col-sm-4 control-label " style="text-align: center">游戏价格:</label>
+                                <div class="col-sm-8" style="margin-left: 0">
+                                    <input type="number" class="form-control" id="price" name="price" placeholder="请输入游戏价格">
+                                </div>
+                            </div>
+                        </div>
+
+
+<!--打折-->
+                        <div class="col-xs-12 col-md-6 user-con-for">
+                            <div class="form-group" id="form-sale">
+                                <label for="sale" class="col-sm-4 control-label " style="text-align: center">游戏打折:</label>
+                                <div class="col-sm-8" style="margin-left: 0">
+                                    <input type="number" class="form-control" id="sale" name="sale" placeholder="请输入游戏打折(%)">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+<!--游戏公司名称-->
+
+                        <div class="col-xs-12 col-md-6 user-con-for">
+                        <div class="form-group" id="form-company">
+                            <label for="company" class="col-sm-4 control-label " style="text-align: center">游戏公司:</label>
+                            <div class="col-sm-8" style="margin-left: 0">
+                                <input type="text" class="form-control" id="company" name="company" placeholder="请输入游戏公司">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    </div>
+
+                </div>
+<!--修改商品信息-->
+
+
+                <div class="col-xs-12 div-play">
+                    <div class="row">
+                        <div class="col-xs-12 con-user-header" style="text-align: center">
+                            修改商品信息
+                        </div>
+                    </div>
+
+
+                    <div class="row"></div>
+
+                </div>
+
+
+                 <div class="col-xs-12" id="topDiv"></div>
+            </div>
+            <!--内容行结束-->
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script type="text/javascript">
+
+    var httpUrl = "http://localhost:8080";
+
+    $(function () {
+
+        $(".user-nav").prop("wightOld",null);
+        /*导航栏高度自动*/
+      $(".user-nav").height($(window).height());
+      $(window).on("resize",function () {
+          $(".user-nav").height($(window).height());
+          $(this).trigger("navResize");//右侧导航小屏是自适应
+
+      });
+          /*导航栏高度自动完成*/
+
+
+          /*小屏菜单显示*/
+        $(".nav-menu").prop("chckt",true);
+          $(".nav-menu").click(function () {
+              if($(this).prop("chckt")){
+                  $("#topDiv").css("display","block");
+                  $("#topDiv").width($(window).width());
+                  $("#topDiv").height($(window).height());
+                  $(".nav-menu").css("color","#F56C2D");
+                $(".user-nav").removeClass("hidden-xs");
+                  $(".user-nav").addClass("visible-xs-block");
+                  var w = $(".user-nav").width();
+                  $(".user-nav").css({"position": "absolute","left":-(w+30)+"px"});
+                  $(".contentPosi").stop().animate({"left":w+"px"},500);
+                  /*给window绑定事件,自适应*/
+                  $(window).bind("navResize",function () {
+                     //
+                      var w =  $(".user-nav").width();
+                      $(".user-nav").css({"position": "absolute","left":-(w+30)+"px"});
+                      $(".contentPosi").css({"left":w+"px"});
+                      $("#topDiv").width($(window).width());
+                      $("#topDiv").height($(window).height());
+                      if($(window).width()>767){
+                          $("#topDiv").css("display","none");
+                          $(".nav-menu").css("color","#ffffff");
+                          $(window).unbind("navResize");
+                          $(".contentPosi").css({"left":"0px"})
+                              $(".user-nav").removeClass("visible-xs-block");
+                              $(".user-nav").addClass("hidden-xs");
+                              $(".user-nav").css({"position": "","left":"0px"});
+                              $(".nav-menu").prop("chckt",true);//标识符更改
+
+
+                      }
+                  });
+
+                     //标识符更改
+                  $(".nav-menu").prop("chckt",false);
+
+
+              }else{
+                  $(".nav-menu").css("color","#ffffff");
+                  $(window).unbind("navResize");
+                  $("#topDiv").css("display","none");
+                  $(".contentPosi").stop().animate({"left":"0px"},500,function () {
+                      $(".user-nav").removeClass("visible-xs-block");
+                      $(".user-nav").addClass("hidden-xs");
+                      $(".user-nav").css({"position": "","left":"0px"});
+                      $(".nav-menu").prop("chckt",true);//标识符更改
+                  });
+
+              }
+          });
+
+        $("#topDiv").click(function () {
+            $(".nav-menu").trigger("click");
+        });
+
+          /*小屏菜单显示设置完毕*/
+          
+          
+          /*新增用户信息的提交*/
+        $("#username").prop("regx",false);
+          $("#username").blur(function () {
+            var  val = $(this).val();
+            var reg = /^[A-Za-z0-9]{4,10}$/;
+              val = val.match(reg)?val:"";
+               if(val){
+                   $("#form-username").removeClass("has-error");
+                  // $(this).parent().parent().addClass("has-success");
+                   $.post(httpUrl+"/origin/servlet/userServlet",{
+                       "method":"isuser",
+                       "username":val
+                   },function (date) {
+                         if(eval(date)){
+                             $("#form-username").removeClass("has-success");
+                             $("#form-username").addClass("has-error");
+                         }else {
+                             $("#form-username").removeClass("has-error");
+                             $("#form-username").addClass("has-success");
+                             $("#username").prop("regx",true);
+                         }
+                   });
+                }else {
+                   $("#username").prop("regx",false);
+                   $("#form-username").addClass("has-error");
+               }
+          });
+
+
+
+          $("#pwd").blur(function () {
+              var  val = $(this).val();
+              var reg = /^[A-Za-z0-9]{4,10}$/;
+              val = val.match(reg)?val:"";
+              if(val){
+                  $("#form-pwd").removeClass("has-error");
+                  $("#form-pwd").addClass("has-success");
+                  $(this).prop("regx",true);
+              }else {
+                  $("#form-pwd").addClass("has-error");
+                  $(this).prop("regx",false);
+              }
+          });
+
+
+
+        $("#email").blur(function () {
+            var  val = $(this).val();
+            var reg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            val = val.match(reg)?val:"";
+            if(val){
+                $(this).prop("regx",true);
+                $("#form-email").removeClass("has-error");
+                $("#form-email").addClass("has-success");
+            }else {
+                $(this).prop("regx",false);
+                $("#form-email").addClass("has-error");
+            }
+        });
+
+
+        $("#country").blur(function () {
+            var  val = $(this).val();
+            if(val!="false"){
+                $(this).prop("regx",true);
+                $(this).parent().parent().removeClass("has-error");
+                $(this).parent().parent().addClass("has-success");
+            }else {
+                $(this).prop("regx",false);
+                $(this).parent().parent().addClass("has-error");
+            }
+        });
+
+
+
+
+
+
+          $("#add").click(function () {
+          var  or =    $("#username").prop("regx")&&$("#pwd").prop("regx")&& $("#email").prop("regx")&&$("#country").prop("regx")&&$("#birth").val();
+                if(or){
+                    var date = new Date();
+                    var month = date.getMonth() + 1;
+                    var strDate = date.getDate();
+                    if (month >= 1 && month <= 9) {
+                        month = "0" + month;
+                    }
+                    if (strDate >= 0 && strDate <= 9) {
+                        strDate = "0" + strDate;
+                    }
+                    var currentdate = date.getFullYear()+"-"+month+"-"+strDate;
+
+                    $.post(httpUrl+"/origin/servlet/userServlet",{
+                          "username": $("#username").val(),
+                          "method":"add",
+                          "pwd":$("#pwd").val(),
+                          "email":$("#email").val(),
+                          "country":$("#country").val(),
+                          "birth":$("#birth").val(),
+                          "birthday":currentdate
+                      },function (data) {
+                        $("#username").val("");
+                        $("#pwd").val("");
+                        $("#email").val("");
+                        $("#country").val("false");
+                        $("#birth").val("");
+
+                        $("#username").parent().parent().removeClass("has-success");
+                        $("#username").parent().parent().removeClass("has-error");
+                        $("#pwd").parent().parent().removeClass("has-success");
+                        $("#pwd").parent().parent().removeClass("has-error");
+                        $("#email").parent().parent().removeClass("has-success");
+                        $("#email").parent().parent().removeClass("has-error");
+                        $("#birth").parent().parent().removeClass("has-success");
+                        $("#birth").parent().parent().removeClass("has-error");
+                        $("#country").parent().parent().removeClass("has-error");
+                        $("#country").parent().parent().removeClass("has-success");
+                            if(eval(data)){
+                                alert("添加成功!")
+                            }else {
+                                alert("添加失败!")
+                            }
+                      });
+                }else {
+
+                    alert("提交的信息有误");
+                }
+          });
+
+
+
+          $(".nav-Btn").eq(0).click(function () {
+              $(".nav-Btn").removeClass("on");
+              $(this).addClass("on");
+              $(".div-play").css("display","none");
+              $(".div-play").eq(0).css("display","block");
+          });
+        $(".nav-Btn").eq(0).trigger("click");
+        $(".nav-Btn").eq(1).click(function () {
+            $(".nav-Btn").removeClass("on");
+            $(this).addClass("on");
+            $(".div-play").css("display","none");
+            $(".div-play").eq(1).css("display","block");
+        });
+
+        $(".nav-Btn").eq(2).click(function () {
+            $(".nav-Btn").removeClass("on");
+            $(this).addClass("on");
+            $(".div-play").css("display","none");
+            $(".div-play").eq(2).css("display","block");
+        });
+
+        $(".nav-Btn").eq(3).click(function () {
+            $(".nav-Btn").removeClass("on");
+            $(this).addClass("on");
+            $(".div-play").css("display","none");
+            $(".div-play").eq(3).css("display","block");
+        });
+
+
+
+
+
+          
+
+    });
+
+</script>
+
+</html>

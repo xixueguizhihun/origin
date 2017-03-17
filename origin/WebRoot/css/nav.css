@@ -1,0 +1,438 @@
+@media screen and (min-width: 992px) {
+    .or-boss {
+        height: 661px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .or-left {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        background-color: rgb(30, 38, 44);
+        padding: 0px;
+        height: 100%;
+    }
+    /*.row {
+    margin: 0px;
+}*/
+    .col-md-3 {
+
+    }
+    .image{
+        background: url(../img/img.png) no-repeat;
+    }
+    ._5 {
+        height: 17px;
+        width: 17px;
+        background-position: 0 0;
+    }
+    ._1 {
+        height: 31px;
+        width: 22px;
+        background-position: 0 -17px;
+    }
+    ._3 {
+        height: 26px;
+        width: 34px;
+        background-position: 0 -48px;
+    }
+    ._2 {
+        height: 21px;
+        width: 68px;
+        background-position: 0 -74px;
+    }
+    ._4 {
+        height: 31px;
+        width: 95px;
+        background-position: 0 -95px;
+    }
+    .or-logo {
+        padding: 35px 0 33px;
+        text-align: center;
+    }
+    .home {
+        display: flex;
+        text-decoration: none;
+        justify-content: center;
+    }
+    i _1::before {
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+    }
+    .or-ser {
+        text-align: center;
+        height: 45px;
+        width: 233px;
+        border-radius: 30px;
+        border: 1px solid #f56c2d;
+        background-color: #fff;
+        margin: 0 auto;
+        position: relative;
+    }
+    .or-ser i {
+        position: absolute;
+        left: 0px;
+    }
+    .ser {
+        width: 150px;
+        height: 42px;
+        border-style: none;
+        outline: none;
+    }
+    .or-nav {
+        margin: 0px;
+        margin-top: 20px;
+        position: relative;
+    }
+    .or-nav ul {
+        list-style: none;
+        padding: 0px;
+    }
+    .or-nav li {
+        padding-bottom: 8px;
+    }
+    .or-nav a {
+        padding: 14px 0 14px 20px;
+        line-height: 22px;
+        color: #c3c6ce;
+        cursor: pointer;
+        font-weight: 400;
+    }
+    .or-nav .store {
+        font-size: large;
+        margin-left: 40px;
+        line-height: 50px;
+    }
+    .or-nav li a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+    .or-nav li:hover {
+        background: rgba(120, 125, 133, .5);
+    }
+    .or-nav-item {
+        margin-left: 70px;
+    }
+    #llll li {
+        position: relative;
+    }
+    .or-nav-icon {
+        position: absolute;
+        right: 50px;
+        top: 0px;
+    }
+    .or-hr {
+        margin: 0 50px;
+    }
+    .or-hr hr {
+        background-color: #c3c6ce;
+    }
+    .or-nav-two a {
+        color: #c3c6ce;
+        text-decoration: none;
+    }
+    .or-nav-two ul {
+        margin-left: 40px;
+    }
+    .or-nav-two li {
+        display: inline;
+        color: #c3c6ce;
+    }
+    .or-hide-dione {
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        right: -190px;
+        top: 0px;
+        width: 190px;
+        border: #c3c6ce 1px solid;
+        border-radius: 3px;
+        background-color: #fff;
+        line-height: 30px;
+    }
+    .or-hide-dione li {
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    .or-hide-dione li a {
+        display: block;
+        width: 100%;
+    }
+    .or-hide-dione li:hover {
+        background-color: rgb(237, 241, 242);
+    }
+    .or-hide-ditwo {
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        right: -190px;
+        top: 0px;
+        width: 190px;
+        border: #c3c6ce 1px solid;
+        border-radius: 3px;
+        background-color: #fff;
+        line-height: 30px;
+    }
+    .or-hide-ditwo li {
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    .or-hide-ditwo li a {
+        display: block;
+        width: 100%;
+    }
+    .or-hide-ditwo li:hover {
+        background-color: rgb(237, 241, 242);
+    }
+    .or-hide-dithr {
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        right: -190px;
+        top: 0px;
+        width: 190px;
+        border: #c3c6ce 1px solid;
+        border-radius: 3px;
+        background-color: #fff;
+        line-height: 30px;
+    }
+    .or-hide-dithr li {
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    .or-hide-dithr li a {
+        display: block;
+        width: 100%;
+    }
+    .or-hide-dithr li:hover {
+        background-color: rgb(237, 241, 242);
+    }
+    .or-hide-difour {
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        right: -190px;
+        top: 0px;
+        width: 190px;
+        border: #c3c6ce 1px solid;
+        border-radius: 3px;
+        background-color: #fff;
+        line-height: 30px;
+    }
+    .or-hide-difour li {
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    .or-hide-difour li a {
+        display: block;
+        width: 100%;
+    }
+    .or-hide-difour li:hover {
+        background-color: rgb(237, 241, 242);
+    }
+    .hid {
+        display: none;
+    }
+    .or-bottom {
+        margin-left: 0px;
+        margin-top: 80px;
+    }
+    .or-bottom ul {
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+    .or-bottom li {
+        list-style: none;
+        margin-bottom: 8px;
+        line-height: 30px;
+    }
+    .or-bottom li a {
+        width: 233px;
+        text-decoration: none;
+        color: #c3c6ce;
+    }
+    .or-btn-lo {
+        background: #f56c2d;
+        color: #fff;
+    }
+    .or-btn-re {
+        border: 1px solid #fff;
+        color: #fff;
+    }
+    .f-right {
+        float: right;
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .or-boss {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .image {
+        background: url(../img/img.png) no-repeat;
+    }
+    ._5 {
+        height: 17px;
+        width: 17px;
+        background-position: 0 0;
+    }
+    ._1 {
+        height: 31px;
+        width: 22px;
+        background-position: 0 -17px;
+    }
+    ._3 {
+        height: 26px;
+        width: 34px;
+        background-position: 0 -48px;
+    }
+    ._2 {
+        height: 21px;
+        width: 68px;
+        background-position: 0 -74px;
+    }
+    ._4 {
+        height: 31px;
+        width: 95px;
+        background-position: 0 -95px;
+    }
+    .or-head {
+        background-color: rgb(30, 38, 44);
+    }
+    .or-head a {
+        color: white;
+    }
+    .or-logo {
+        padding: 0;
+        text-align: center;
+        position: relative;
+    }
+    .home {
+        display: flex;
+        text-decoration: none;
+        justify-content: center;
+    }
+    #guide {
+        background-color: rgb(30, 38, 44);
+        height: 670px;
+        width: 260px;
+        position: absolute;
+        left: -260px;
+        top: 0px;
+    }
+    #guide ul {
+        list-style: none;
+        color: #c3c6ce;
+        padding: 0px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+    #guide a{
+        text-decoration: none;
+    }
+    .or-nav {
+        position: relative;
+    }
+    .store ul li {
+        list-style: none;
+        padding-left: 40px;
+    }
+    .or-nav a {
+        color: #c3c6ce;
+    }
+    .store li:hover {
+        background: rgba(120, 125, 133, .5);
+        color: white;
+    }
+    .or-nav-item {
+        margin-left: 0px;
+    }
+    .or-hr {
+        margin: 0 50px;
+    }
+    .or-hr hr {
+        background-color: #c3c6ce;
+    }
+    .or-nav-two a {
+        color: #c3c6ce;
+        text-decoration: none;
+    }
+    .or-nav-two ul {
+        margin-left: 40px;
+    }
+    .or-nav-two li {
+        display: inline;
+        color: #c3c6ce;
+    }
+    .or-bottom {
+        margin-left: 0px;
+        margin-top: 80px;
+    }
+    .or-bottom ul {
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+    .or-bottom li {
+        list-style: none;
+        margin-bottom: 8px;
+        line-height: 30px;
+    }
+    .or-bottom li a {
+        width: 233px;
+        text-decoration: none;
+        color: #c3c6ce;
+    }
+    .or-btn-lo {
+        background: #f56c2d;
+        color: #fff;
+    }
+    .or-btn-re {
+        border: 1px solid #fff;
+        color: #fff;
+    }
+    .or-main {
+        height: 670px;
+        padding: 0px;
+        margin: 0px;
+        position: relative;
+    }
+    .or-ser {
+        text-align: center;
+        height: 30px;
+        width: 0px;
+        border-radius: 30px;
+        background-color: #fff;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .i-one {
+        position: absolute;
+        left: 0px;
+        top: -5px;
+    }
+    .i-two {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .ser {
+        width: 150px;
+        height: 30px;
+        border-style: none;
+        outline: none;
+    }
+    .hid {
+        display: none;
+    }
+    #header {
+        position: relative;
+    }
+}

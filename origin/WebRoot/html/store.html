@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Origin|Origin</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
+    <script src="../js/jquery-1.11.1.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/nav.css" type="text/css">
+    <style>
+        .or-cont {
+            padding: 0px;
+            margin: 0px;
+            position: relative;
+
+        }
+
+        /* 轮播1样式 */
+        #myCarousel a {
+            opacity: 0;
+        }
+
+        .carousel-inner img {
+            width: 1130px;
+            margin: 0 auto;
+        }
+
+        /* 中间排列图片样式 */
+        .middle img { /* margin-left: 60px;  */
+            margin-top: 40px;
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        img:hover {
+            box-shadow: 0px 0px 20px gray;
+        }
+
+        /* 轮播2 */
+        .lunbo2 {
+            margin-top: 50px;
+        }
+
+        .lunbo2 span {
+            font-size: 30px;
+        }
+
+        .play {
+
+            width: 100%;
+            margin: 0 auto;
+            height: 440px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .play_1 img {
+            border: 0px;
+            margin: 0px;
+            float: left;
+        }
+
+        .play_1 {
+            padding: 0px;
+            float: left;
+            width: 3420px;
+            height: 400px;
+            position: absolute;
+            animation: flash 15s ease-out infinite alternate;
+        }
+
+        @keyframes flash {
+            0%,
+            30% {
+                margin-left: -0px;
+            }
+            35%,
+            60% {
+                margin-left: -1140px;
+            }
+            65%,
+            100% {
+                margin-left: -2280px;
+            }
+
+        }
+
+        .a_0 {
+
+            float: left;
+            border: 1px gray solid;
+            width: 18px;
+            height: 18px;
+            border-radius: 100%;
+            cursor: pointer;
+            position: absolute;
+            top: 380px;
+            z-index: 1;
+            text-align: center;
+        }
+
+        #a1 {
+            left: 45%;
+        }
+
+        #a2 {
+            left: 50%;
+        }
+
+        #a3 {
+            left: 55%;
+        }
+
+        @keyframes am1 {
+            100% {
+                transform: translateX(-0px);
+            }
+        }
+
+        @keyframes am2 {
+            100% {
+                transform: translateX(-1140px);
+            }
+        }
+
+        @keyframes am3 {
+            100% {
+                transform: translateX(-2280px);
+            }
+        }
+
+        #a1:hover ~ #play_flash {
+            animation: am1 0.5s ease-out forwards;
+        }
+
+        #a2:hover ~ #play_flash {
+            animation: am2 0.5s ease-out forwards;
+        }
+
+        #a3:hover ~ #play_flash {
+            animation: am3 0.5s ease-out forwards;
+        }
+
+        #a1:hover {
+            background-color: orange;
+        }
+
+        #a2:hover {
+            background-color: orange;
+        }
+
+        #a3:hover {
+            background-color: orange;
+        }
+
+        /* 单个div设置样式 */
+        .all {
+            display: inline-block;
+            margin-left: 20px;
+            width: 144px;
+            height: 337px;
+            cursor: pointer;
+            border: 1px solid gray;
+        }
+
+        .d1 {
+            background: white;
+            height: 137px;
+            width: 144px;
+        }
+
+        .d2 {
+            position: absolute;
+            top: 29px;
+            width: 144px;
+            height: 202px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: none;
+            text-align: center;
+        }
+
+        .all:hover .d2 {
+            display: block;
+        }
+
+        .all:hover {
+            box-shadow: 0px 0px 20px gray;
+        }
+
+        .d2 .p1 {
+            margin-top: 72px;
+            background: orange;
+        }
+
+        .d2 div {
+            margin-top: 72px;
+        }
+
+        .p3 {
+            text-align: center;
+        }
+
+        .p4 {
+            color: red;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .img {
+            width: 144px;
+            height: 202px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="row  or-boss">
+    <div class="col-xs-12" style="overflow-y: visible ">
+        <div class="row or-head hidden-md hidden-lg visible-sm-block visible-xs-block" id="header">
+            <div class="col-sm-2 col-xs-4">
+                <a class="btn glyphicon glyphicon-th-list" id="sel"></a>
+            </div>
+            <div class="col-sm-8  col-xs-4 or-logo"><a href="#" class="home"><i class="image _4"></i></a></div>
+            <div class="col-sm-1 col-xs-1 col-sm-offset-1 col-xs-offset-2">
+                <a class="btn glyphicon glyphicon-search" id="seraa"></a>
+            </div>
+
+        </div>
+        <div class="row or-main" style="overflow-x: hidden " style="border: 1px solid red ">
+            <div class="col-md-3"></div>
+            <div class="col-sm-12 or-cont col-md-9 col-md-offset-3"  style="border: 1px solid red " >
+                <!--在这加-->
+
+                <!--cw的商店开始-->
+
+                <div class="row" style="background:#edf1f2;">
+
+                    <div class="col-xs-12" style="padding: 0px;margin: 0px;position: relative;left: 13px;overflow: hidden;">
+
+                        <!--轮播图1-->
+                        <div id="myCarousel" class="carousel slide">
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="img/lo1.jpg" height="1070px" width="450px" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img src="img/lo2.jpg" height="1070px" width="450px" alt="Second slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                        </div>
+
+                        <!--四张图排列-->
+                        <div>
+                            <div class="middle" style="padding:0px; text-align: center;">
+                                <div class="row">
+                                    <div class="col-sm-6"><img src="img/p1.jpg" class="img-responsive " height="361" width="471"></div>
+                                    <div class="col-sm-6"><img src="img/p2.jpg" class="img-responsive " height="361" width="471"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6"><img src="img/p3.jpg" class="img-responsive " height="361" width="471"></div>
+                                    <div class="col-sm-6"><img src="img/p4.jpg" class="img-responsive " height="361" width="471"></div>
+                                </div>
+                            </div>
+
+                            <!--清除浮动-->
+
+
+                            <!--轮播2-->
+                            <div class="lunbo2">
+
+                                    <span>热门趋势<a href="#"
+                                                 style="color:blue;font-size:30px;padding:30px;">查看全部</a></span>
+
+                                <div class="play">
+
+                                    <a class="a_0" id="a1"></a>
+                                    <a class="a_0" id="a2"></a>
+                                    <a class="a_0" id="a3"></a>
+                                    <div class="play_1" id="play_flash">
+
+                                        <a href="#">
+                                            <div class="min">
+                                                <div class="max" style="margin-top:30px;">
+
+                                                    <div class='all' id='cc' style="margin-left:0px;">
+                                                        <img class='img' src='img/h-01.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>The&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$13.14</p>
+                                                        </div>
+                                                        <div class='d2'>
+                                                            <button type="button" class="p1 btn btn-primary">了解详情
+                                                            </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>
+                                                                加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-02.png'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>屋塔小王子_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$15.1</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-03.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>dffege&nbsp;Sesdsan_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$05.64</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-04.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Ghe&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$09.66</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-05.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Tfg&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$6.08</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-06.png'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>你猜猜猜&nbsp;_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$45.01</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-07.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>The&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$09.09</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-08.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>消消乐_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$3.04</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-09.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>饿狼传说_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$9.14</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-10.png'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>hhe&nbsp;uuggn_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$23.04</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-11.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>英雄联盟LOL_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$12.94</p>
+                                                        </div>
+                                                        <div class='d2'>
+                                                            <p class='p1'>了解详情</p>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-12.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Bout&nbsp;hoee_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$09.08</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-13.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Hun&nbsp;origin</p>
+                                                            <br><br>
+                                                            <p class='p4'>$45.08</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-05.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Gouer&nbsp;Kiki</p>
+                                                            <br><br>
+                                                            <p class='p4'>$31.15</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-03.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Mnother&nbsp;Son</p>
+                                                            <br><br>
+                                                            <p class='p4'>$6.17</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-12.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Thkki&nbsp;Thiee</p>
+                                                            <br><br>
+                                                            <p class='p4'>$20.05</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-01.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>The&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$8.14</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-14.png'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Kohe&nbsp;Asdan_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$6.58</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-15.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Theenhjbvd&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$3.14</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-16.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>网络游戏，你最大_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$10.05</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--轮播2结束-->
+
+
+                                <!--轮播3开始-->
+
+                                <div><span>额外内容<a href="#" style="color:blue;font-size:30px;padding:30px;">查看全部</a></span>
+
+                                </div>
+                                <div class="play">
+
+                                    <a class="a_0" id="a1"></a>
+                                    <a class="a_0" id="a2"></a>
+                                    <a class="a_0" id="a3"></a>
+                                    <div class="play_1" id="play_flash">
+
+                                        <a href="#">
+                                            <div class="min">
+                                                <div class="max" style="margin-top:30px;">
+
+                                                    <div class='all' id='cc' style="margin-left:0px;">
+                                                        <img class='img' src='img/h-01.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Hjfhf&nbsp;San_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$08.46</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-02.png'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>英东&nbsp;大冒险_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$3.94</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-03.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Jqudncg&nbsp;Jgdb</p>
+                                                            <br><br>
+                                                            <p class='p4'>$26.4</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-04.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Bootstra&nbsp;Augdrg</p>
+                                                            <br><br>
+                                                            <p class='p4'>$8.10</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-05.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>The&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$09.74</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-06.png'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>The&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$13.14</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-07.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>贪吃蛇_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$33.14</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-08.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>打地鼠_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$33.05</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-09.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Year&nbsp;GGG_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$67.14</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-10.png'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>奋勇战士_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$7.14</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-11.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>HH&nbsp;Kreaol_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$7.04</p>
+                                                        </div>
+                                                        <div class='d2'>
+                                                            <p class='p1'>了解详情</p>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-12.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>TouKi&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$88.14</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-13.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>The&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$10.14</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-05.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Khe&nbsp;Ean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$8.14</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-03.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Hgyu&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$6.10</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-12.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>终极特工_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$4.15</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-01.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Ruyu&nbsp;Seaea_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$9.89</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-14.png'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>超级玛丽_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$6.11</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-15.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Uoo&nbsp;Sean_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$13.14</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class='all' id='cc'>
+                                                        <img class='img' src='img/h-16.jpg'>
+                                                        <div class='d1'>
+                                                            <p class='p3'>Hu&nbsp;Sn_</p>
+                                                            <br><br>
+                                                            <p class='p4'>$5.5</p>
+                                                        </div>
+                                                        <div class='d2'><button type="button" class="p1 btn btn-primary">了解详情
+                                                        </button>
+                                                            <p class='p2 glyphicon glyphicon-heart-empty'>加入心愿购物单</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+
+
+                                <!--轮播3结束-->
+
+
+
+
+                                <!--尾部添加-->
+                                <!--底部-->
+                                <footer class="container col-md-12 col-lg-12" style="margin-bottom: 50px;background-color:#ffffff">
+                                    <div class="row" style="margin-top: 30px">&nbsp;<br></div>
+                                    <div class="row">
+                                        <div class="col-lg-8 col-md-12">
+                                            <div class="row">
+                                                <div class="col-lg-5 col-md-5 col-xs-5">
+                                                    <ul style="list-style-type: none">
+                                                        <li>关于优质游戏保证</li>
+                                                        <li>优质游戏保证条款</li>
+                                                        <li>法律信息</li>
+                                                        <li>联系我们</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5 col-xs-5">
+                                                    <ul style="list-style-type: none">
+                                                        <li>销售条款</li>
+                                                        <li>使用者协议</li>
+                                                        <li>公司信息</li>
+                                                        <li>隐私与Cookie政策（您的隐私权）</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-3 col-md-12">
+                                            <ul style="list-style-type: none">
+                                                <li>
+                                                    <form role="form">
+                                                        <div class="form-group">
+                                                            <label>语言</label>
+                                                            <select class="form-control">
+                                                                <option>中文</option>
+                                                                <option>英文</option>
+                                                            </select>
+                                                        </div>
+                                                    </form>
+                                                </li>
+                                                <li>© 2016 Electronic Arts Inc.</li>
+                                                <li>Origin v10.4.8.554322</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </footer>
+                                <!--尾部结束-->
+
+                            </div>
+
+
+                            <div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--cw的商店结束-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--左边导航-->
+    <div id="guide" class="visible-xs-block visible-sm-block hidden-md hidden-lg   or-boss" >
+        <div class="or-nav">
+            <ul>
+                <li class="store" id="si">商店
+                    <ul>
+                        <li or-nav-item><a href="game.html">浏览游戏</a></li>
+                        <li or-nav-item><a href="temai.html">特卖</a></li>
+                        <li or-nav-item><a href="free-games.html">免费游戏</a></li>
+                        <li or-nav-item><a href="origin-access.html">Origin Access</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="or-hr">
+            <hr/>
+        </div>
+        <div class="row or-nav-two">
+            <ul>
+                <li><a>关于</a></li>
+                <li><a>下载</a></li>
+                <li><a>说明</a></li>
+            </ul>
+        </div>
+        <div class="row or-bottom">
+            <ul>
+                <li><a class="btn btn-lg or-btn-lo" href="login.html">登录</a></li>
+                <li><a class="btn btn-lg or-btn-re" href="register.html">注册</a></li>
+                <li><a href="#"><span class="img _3" style="font-size: 20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>语言偏好设定</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="or-ser visible-xs-block visible-sm-block hidden-md hidden-lg " id="sera">
+        <div class="hid or-hid">
+            <i class="	glyphicon glyphicon-search btn-lg i-one"></i>
+            <form>
+                <input type="search" class="ser" id="sea" placeholder="搜寻游戏及其他">
+            </form>
+            <i class="glyphicon glyphicon-remove-circle i-two  "></i>
+        </div>
+    </div>
+
+
+    <div class="hidden-xs hidden-sm visible-md-block visible-lg-block">
+        <div class="row or-boss">
+            <div class="col-xs-3 or-left">
+                <div class="or-logo">
+                    <a href="#" class="home">
+                        <i class="image _4"></i>
+                    </a>
+                </div>
+                <div class="or-ser">
+                    <i class="	glyphicon glyphicon-search btn-lg"></i>
+                    <form>
+                        <input type="search" class="ser" id="seee" placeholder="搜寻游戏及其他">
+                    </form>
+                </div>
+                <div class="row or-nav">
+                    <ul>
+                        <li style="border-left: 3px solid orange;background-color: #4B5158;"><a href="#" class="store">商店</a></li>
+                        <ul id="llll">
+                            <li><a href="game.html" class="or-nav-item"><span>浏览游戏</span><span
+                                    class="or-nav-icon glyphicon glyphicon-chevron-right"></span></a>
+                                <div class="or-hide-dione hid">
+                                    <ul>
+                                        <li>所有PC游戏<span class=" glyphicon glyphicon-chevron-right f-right"></span></li>
+                                        <li>战地风云<span class=" glyphicon glyphicon-chevron-right f-right"></span></li>
+                                        <li>模拟市民<span class=" glyphicon glyphicon-chevron-right f-right"></span></li>
+                                        <li>Titanfall<span class=" glyphicon glyphicon-chevron-right f-right"></span>
+                                        </li>
+                                        <li>质量效应<span class=" glyphicon glyphicon-chevron-right f-right"></span></li>
+                                        <li>《星际大战》<span class=" glyphicon glyphicon-chevron-right f-right"></span></li>
+                                        <li>《闇龙纪元》<span class=" glyphicon glyphicon-chevron-right f-right"></span></li>
+                                        <li>FIFA<span class="glyphicon glyphicon-chevron-right f-right"></span></li>
+                                        <li>《急速快感》<span class="glyphicon glyphicon-chevron-right f-right"></span></li>
+                                        <li>《植物大战僵尸》<span class=" glyphicon glyphicon-chevron-right f-right"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="temai.html" class="or-nav-item"><span>特卖</span><span
+                                    class="or-nav-icon glyphicon glyphicon-chevron-right"></span></a>
+                                <div class="or-hide-ditwo hid">
+                                    <ul>
+                                        <li>特价</li>
+                                        <li>∈5</li>
+                                        <li>∈10</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="free-games.html" class="or-nav-item"><span>免费游戏</span><span
+                                    class="or-nav-icon glyphicon glyphicon-chevron-right"></span></a>
+                                <div class="or-hide-dithr hid">
+                                    <ul>
+                                        <li>本店招待</li>
+                                        <li>试玩版</li>
+                                        <li>试玩与BETA测试版</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="origin-access.html" class="or-nav-item"><span>Origin Access</span><span
+                                    class="or-nav-icon glyphicon glyphicon-chevron-right"></span></a>
+                                <div class="or-hide-difour hid">
+                                    <ul>
+                                        <li>「The Valut」游戏</li>
+                                        <li>抢先试玩版</li>
+                                        <li>Origin Access常见问题集</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="or-hr">
+                    <hr/>
+                </div>
+                <div class="row or-nav-two">
+                    <ul>
+                        <li><a>关于</a></li>
+                        <li><a>下载</a></li>
+                        <li><a>说明</a></li>
+                    </ul>
+                </div>
+                <div class="row or-bottom">
+                    <ul>
+                        <li><a class="btn btn-lg or-btn-lo" href="login.html">登录</a></li>
+                        <li><a class="btn btn-lg or-btn-re" href="register.html">注册</a></li>
+                        <li><a href="#"><span class="image _3" style="font-size: 20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>语言偏好设定</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        /*MD*/
+        $("#llll>li").eq(0).mouseenter(function () {
+            $(".or-hide-dione").removeClass("hid");
+        })
+        $("#llll>li").eq(0).mouseleave(function () {
+            $(".or-hide-dione").addClass("hid");
+        })
+        $("#llll>li").eq(1).mouseenter(function () {
+            $(".or-hide-ditwo").removeClass("hid");
+        })
+        $("#llll>li").eq(1).mouseleave(function () {
+            $(".or-hide-ditwo").addClass("hid");
+        })
+
+        $("#llll>li").eq(2).mouseenter(function () {
+            $(".or-hide-dithr").removeClass("hid");
+        })
+        $("#llll>li").eq(2).mouseleave(function () {
+            $(".or-hide-dithr").addClass("hid");
+        })
+        $("#llll>li").eq(3).mouseenter(function () {
+            $(".or-hide-difour").removeClass("hid");
+        })
+        $("#llll>li").eq(3).mouseleave(function () {
+            $(".or-hide-difour").addClass("hid");
+        })
+        /*   SM*/
+        $(function () {
+
+            $("#guide").click(function () {
+                $("#guideModal").modal({
+                    backdrop: false,
+                    keyboard: false
+                });
+            });
+
+            $("#guideClose").click(
+                function () {
+                    $("#guideModal").modal("hide");
+                }
+            );
+        })
+        //左导航移动
+        $(function () {
+
+            $("#header").click(function () {
+                $("#guide").animate({
+                    left: '-262px'
+                })
+                $("#header").animate({
+                    left: '0px'
+                })
+                $(".or-main").animate({
+                    left: '0px'
+                })
+            })
+            $(".or-main").click(function () {
+                $("#guide").animate({
+                    left: '-262px'
+                })
+                $("#header").animate({
+                    left: '0px'
+                })
+                $(".or-main").animate({
+                    left: '0px'
+                })
+            })
+            $("#sel").prop("test", true);
+            $("#sel").click(function () {
+                if ($(this).prop("test")) {
+                    $(this).prop("test", false);
+                    $("#guide").animate({
+                        left: '0px'
+                    })
+                    $("#header").animate({
+                        left: '260px'
+                    })
+                    $(".or-main").animate({
+                        left: '260px'
+                    })
+                    return false;
+                } else {
+                    $(this).prop("test", true);
+                }
+            })
+
+
+            //右边搜索框
+            $("#seraa").prop("test", true);
+            $("#seraa").click(function () {
+                if ($(this).prop("test")) {
+                    $(this).prop("test", false);
+                    $("#sera").animate({
+                        width: '80%'
+                    })
+                    $(".or-hid").removeClass("hid")
+                    $(".or-logo").animate({
+                        top: '-30px'
+                    })
+                    return false;
+                } else {
+                    $(this).prop("test", true);
+                }
+            })
+        })
+        $(".i-two").click(function () {
+            $("#sera").animate({
+                width: '0px'
+            })
+            $(".or-hid").addClass("hid")
+            $(".or-logo").animate({
+                top: '0px'
+            })
+        })
+
+    </script>
+</body>
+
+</html>
